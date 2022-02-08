@@ -12,4 +12,6 @@ public class MoneyTransfer extends Transaction {
     public String getRecipient() {
         return recipient;
     }
+
+
 }

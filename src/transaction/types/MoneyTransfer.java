@@ -13,5 +13,4 @@ public class MoneyTransfer extends Transaction {
         return recipient;
     }
 
-
 }

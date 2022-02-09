@@ -20,4 +20,42 @@ public class Bill extends Transaction {
     public Double getBills_charge() {
         return bills_charge;
     }
+
+    @Override
+    public String toString() {
+
+        String output =
+                "\n[BILL] " +
+                        "\nTransaction ID: " + this.transaction_id +
+                        "\nAccount ID: " + this.account_id +
+                        "\nStore ID: " + this.store_id +
+                        "\nCompany Name: " + this.company_name +
+                        "\nAmount: " + this.amount +
+                        "\nBill: " + this.bills_charge +
+                        "\nTimestamp: " + this.timestamp;
+
+        return output;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        Bill obj = (Bill) object;
+        if (obj == this) {
+            return true;
+        }
+
+        if (
+                Integer.compare(this.store_id, obj.store_id) == 0 &&
+                        Integer.compare(this.transaction_id, obj.transaction_id) == 0 &&
+                        Integer.compare(this.account_id, obj.account_id) == 0 &&
+                        Double.compare(this.amount, obj.amount) == 0 &&
+                        Double.compare(this.bills_charge, obj.bills_charge) == 0 &&
+                        this.company_name.equals(obj.company_name)
+
+        ) {
+            return true;
+        }
+
+        return false;
+    }
 }

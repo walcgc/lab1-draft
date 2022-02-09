@@ -13,4 +13,18 @@ public class MoneyTransfer extends Transaction {
         return recipient;
     }
 
+    @Override
+    public String toString() {
+
+        String output =
+                "\n[MONEY TRANSFER] " +
+                        "\nTransaction ID: " + this.transaction_id +
+                        "\nAccount ID: " + this.account_id +
+                        "\nStore ID: " + this.store_id +
+                        "\nRecipient: " + this.recipient +
+                        "\nAmount: " + this.amount +
+                        "\nTimestamp: " + this.timestamp;
+
+        return output;
+    }
 }

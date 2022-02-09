@@ -14,4 +14,19 @@ public class AddGameCredit extends Transaction {
     public String getCompany_name() {
         return company_name;
     }
+
+    @Override
+    public String toString() {
+
+        String output =
+                "\n[ADD GAME CREDIT] " +
+                        "\nTransaction ID: " + this.transaction_id +
+                        "\nAccount ID: " + this.account_id +
+                        "\nStore ID: " + this.store_id +
+                        "\nCompany Name: " + this.company_name +
+                        "\nAmount: " + this.amount +
+                        "\nTimestamp: " + this.timestamp;
+
+        return output;
+    }
 }

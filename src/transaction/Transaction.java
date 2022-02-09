@@ -38,4 +38,19 @@ public class Transaction {
     public Double getAmount() {
         return amount;
     }
+
+    @Override
+    public String toString(){
+
+        String output =
+                "\n[TRANSACTION] " +
+                "\nTransaction ID: " + this.transaction_id +
+                "\nAccount ID: " + this.account_id +
+                "\nStore ID: " + this.store_id +
+                "\nAmount: " + this.amount +
+                "\nTimestamp: " + this.timestamp;
+
+        return output;
+    }
+
 }

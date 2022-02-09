@@ -14,4 +14,19 @@ public class BuyLoad extends Transaction {
     public Long getMsisdn() {
         return msisdn;
     }
+
+    @Override
+    public String toString() {
+
+        String output =
+                "\n[BUY LOAD] " +
+                        "\nTransaction ID: " + this.transaction_id +
+                        "\nAccount ID: " + this.account_id +
+                        "\nStore ID: " + this.store_id +
+                        "\nMSISDN: " + this.msisdn +
+                        "\nAmount: " + this.amount +
+                        "\nTimestamp: " + this.timestamp;
+
+        return output;
+    }
 }
